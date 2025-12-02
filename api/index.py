@@ -1,6 +1,13 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
 
+import sys
+import os
+
+# --- [THÊM ĐOẠN NÀY] ---
+# Giúp Python hiểu rằng thư mục hiện tại (api/) là thư mục gốc để tìm các file khác
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
 # Load Config
 from config import Config
 
